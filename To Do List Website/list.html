@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header-section">
+        <!-- <h1 class="judul">To-Do List</h1>
+        <!-- <h1 class="greeting">Hai👋, kamu mempunyai <span id="task-count">0</span> tugas yang perlu diselesaikan!</h1> -->
+        <!-- <p class="motivation">Kelola tugasmu berdasarkan kategori untuk lebih terorganisir</p> --> 
+        
+       
+    </div>
+    
+    <div class="container">
+        <div class="app-header">
+            <i class="fas fa-clipboard-list header-icon"></i>
+            <h1><i class="fas fa-tasks"></i> To-Do List </h1>
+        </div>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="Tambahkan tugas baru...">
+                <button id="add-task-btn"><i class="fas fa-plus"></i> Tambah</button>
+            </div>
+            
+            <div class="category-selector">
+                <button class="category-btn home" data-category="home">
+                    <i class="fas fa-home"></i> Rumah
+                </button>
+                <button class="category-btn school" data-category="school">
+                    <i class="fas fa-book"></i> Sekolah
+                </button>
+                <button class="category-btn sport" data-category="sport">
+                    <i class="fas fa-running"></i> Olahraga
+                </button>
+                <button class="category-btn other" data-category="other">
+                    <i class="fas fa-plus"></i> Lainnya
+                </button>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="active">Aktif</button>
+                <button class="filter-btn" data-filter="completed">Selesai</button>
+            </div>
+            
+            <div class="category-filter">
+                <select id="category-filter">
+                    <option class="all-category" value="all">Semua Kategori</option>
+                    <option value="home">Rumah</option>
+                    <option value="school">Sekolah</option>
+                    <option value="sport">Olahraga</option>
+                    <option value="other">Lainnya</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="tasks-container" id="tasks-container">
+            <div class="empty-state">
+                <i class="fas fa-clipboard-list"></i>
+                <h3>Tidak ada tugas</h3>
+                <p>Tambahkan tugas baru untuk memulai</p>
+            </div>
+        </div>
+        
+       
+    </div>
+    <br>
+    <div class="stats-card">
+        <div class="stat-item">
+            <div class="stat-value" id="total-stat">0</div>
+            <div class="stat-label">Total Tugas</div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="stat-item">
+            <div class="stat-value" id="active-stat">0</div>
+            <div class="stat-label">Belum Selesai</div>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="stat-item">
+            <div class="stat-value" id="completed-stat">0</div>
+            <div class="stat-label">Tugas Selesai</div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
