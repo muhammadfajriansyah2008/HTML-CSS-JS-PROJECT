@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <!-- GOGGLE ICON -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+
+        <!-- GOGGLE ICON -->
+    
+</head>
+
+<body>
+    <div class="main-container">
+        <main>
+            <header class="input-kontainer">
+                <input class="input-kota" placeholder="Cari Kotamu" type="text">
+                <button class="cari-btn">
+                    <span class="material-symbols-outlined">search</span>
+
+                </button>
+
+
+            </header>
+
+            <section class="info-cuaca" style="display: none;">
+                <div class="lokasi-tanggal-kontainer">
+                    <div class="lokasi">
+                        <span class="material-symbols-outlined">
+                            location_on</span>
+                        <h4 class="kota-text">Bengkulu</h4>
+                    </div>
+                    <h5 class="tanggalsekarang-text normal-text">Sabtu, 07 Juni</h5>
+                </div>
+
+                <div class="ringkasan-cuaca-container">
+                    <img src="images/clouds.png" class="gambar-cuaca">
+                        <div class="ringkasan-info-cuaca">
+                            <h1 class="temparatur-text">29 °C</h1>
+                            <h3 class="kondisi-text normal-text">Clouds</h3>
+                        </div>
+                </div>
+
+                <div class="kondisi-cuaca-kontainer">
+                    <div class="kondisi-item">
+                        <span class="material-symbols-outlined">
+                            water_drop
+                        </span>
+                            <div class="kondisi-inpo">
+                                <h5 class="normal-text">Lembab</h5>
+                                <h5 class="hunadity-value-text">55%</h5>
+                            </div>
+                    </div>
+
+                    <div class="kondisi-item">
+                        <span class="material-symbols-outlined">
+                            air
+                        </span>
+                            <div class="kondisi-inpo">
+                                <h5 class="normal-text">Wind Speed</h5>
+                                <h5 class="hunadity-value-text">2 M/s</h5>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="perkiraan-cuaca-kontainer">
+                    <div class="perkiraan-item">
+                        <h5 class="item-perkiraan-tanggal normal-text">8 Juni</h5>
+                        <img src="assets/weather/rain.svg" class="gambar-perkiraan-cuaca">
+                        <h5 class="perkiraan-temperatur">29 °C</h5>
+                    </div>
+
+                    <div class="perkiraan-item">
+                        <h5 class="item-perkiraan-tanggal normal-text">9 Juni</h5>
+                        <img src="assets/weather/clouds.svg"  class="gambar-perkiraan-cuaca">
+                        <h5 class="perkiraan-temperatur">29 °C</h5>
+                    </div>
+
+                    <div class="perkiraan-item">
+                        <h5 class="item-perkiraan-tanggal normal-text">10 Juni</h5>
+                        <img src="assets/weather/clear.svg"  class="gambar-perkiraan-cuaca">
+                        <h5 class="perkiraan-temperatur">29 °C</h5>
+                    </div>
+
+                    <div class="perkiraan-item">
+                        <h5 class="item-perkiraan-tanggal normal-text">7 Juni</h5>
+                        <img src="assets/weather/thunderstorm.svg"  class="gambar-perkiraan-cuaca">
+                        <h5 class="perkiraan-temperatur">29 °C</h5>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cari-kota section-pesan">
+                <img src="assets/message/search-city.png">
+                <div>
+                    <h1>Cari kota</h1>
+                    <h4 class="normal-text">
+                        Cari tau kondisi cuaca kota mu!
+                    </h4>
+                </div>
+            </section>
+
+            <section class="tidakada-kota section-pesan" style="display: none;">
+                <img src="assets/message/not-found.png">
+                <div>
+                    <h1></h1>
+                    <h4 class="normal-text">
+                        Kota tidak ada!
+                    </h4>
+                </div>
+            </section>
+
+
+        </main>
+    </div>
+</body>
+
