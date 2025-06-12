@@ -1,0 +1,142 @@
+body {
+background-color: #121212;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+font-family: Arial, sans-serif;
+overflow: hidden;
+position: relative;
+}
+
+/* Animasi Partikel Background */
+.partikel {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 0;
+}
+
+.partikel-tunggal {
+position: absolute;
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 50%;
+animation: mengambang linear infinite;
+}
+
+@keyframes mengambang {
+0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+}
+50% {
+    opacity: 0.3;
+}
+100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+}
+}
+
+/* Styling Jam */
+.wadah-jam {
+position: relative;
+z-index: 10;
+}
+
+.jam {
+width: 300px;
+height: 300px;
+border-radius: 50%;
+background-color: rgba(30, 30, 30, 0.8);
+position: relative;
+box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+border: 8px solid #333;
+backdrop-filter: blur(5px);
+}
+
+.angka {
+position: absolute;
+width: 100%;
+height: 100%;
+text-align: center;
+transform: rotate(calc(var(--n) * 30deg));
+color: #555;
+font-size: 20px;
+font-weight: bold;
+}
+
+.angka b {
+display: inline-block;
+transform: rotate(calc(var(--n) * -30deg));
+}
+
+.angka.utama {
+color: #ddd;
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.jarum {
+position: absolute;
+left: 50%;
+bottom: 50%;
+transform-origin: bottom;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.jarum-jam {
+width: 8px;
+height: 80px;
+background-color: #f0f0f0;
+margin-left: -4px;
+}
+
+.jarum-menit {
+width: 5px;
+height: 110px;
+background-color: #ccc;
+margin-left: -2.5px;
+}
+
+.jarum-detik {
+width: 2px;
+height: 130px;
+background-color: #ff5555;
+margin-left: -1px;
+}
+
+.pusat {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 15px;
+height: 15px;
+background-color: #ff5555;
+border-radius: 50%;
+transform: translate(-50%, -50%);
+z-index: 10;
+box-shadow: 0 0 10px rgba(255, 85, 85, 0.5);
+}
+
+/* Efek Cahaya */
+.cahaya {
+position: absolute;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+box-shadow: 0 0 60px rgba(255, 255, 255, 0.05);
+animation: berdenyut 4s infinite alternate;
+}
+
+@keyframes berdenyut {
+0% {
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.05);
+}
+100% {
+    box-shadow: 0 0 80px rgba(255, 255, 255, 0.1);
+}
+}
